@@ -58,8 +58,9 @@ def process_document(uploaded_file: UploadedFile) -> list[Document]:
 
     loader = PyMuPDFLoader(temp_file.name)
     docs = loader.load()
-    os.unlink(temp_file.name)  # Delete temp file
+    temp_file.close()                           # added by appsb 25/02/25 - close the file before further processing 
 
+    os.unlink(temp_file.name)  # Delete temp file
     text_splitter = RecursiveCharacterTextSplitter(
         chunk_size=400,
         chunk_overlap=100,
@@ -159,7 +160,7 @@ def call_llm(context: str, prompt: str):
         OllamaError: If there are issues communicating with the Ollama API
     """
     response = ollama.chat(
-        model="llama3.2:3b",
+        model="mistral",
         stream=True,
         messages=[
             {
