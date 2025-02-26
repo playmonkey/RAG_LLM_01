@@ -1,7 +1,15 @@
+# ---------------------------------------------------------------------------------------------------------------   
+#
+#   See https://www.youtube.com/watch?v=1y2TohQdNbo
+#   Build your own RAG based LLM Application (Completely Offline!): AI for your documents 
+#   Yankee Maharjan
+#
+# ---------------------------------------------------------------------------------------------------------------   
 import os
 import tempfile
 
 import chromadb
+import ollama
 import ollama
 import streamlit as st
 from chromadb.utils.embedding_functions.ollama_embedding_function import (
