@@ -227,6 +227,7 @@ if __name__ == "__main__":
                 str.maketrans({"-": "_", ".": "_", " ": "_"})
             )
             all_splits = process_document(uploaded_file)
+            st.write(all_splits)           #  debug
             add_to_vector_collection(all_splits, normalize_uploaded_file_name)
 
     # Question and Answer Area
