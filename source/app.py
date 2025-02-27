@@ -22,6 +22,9 @@ from sentence_transformers import CrossEncoder
 from streamlit.runtime.uploaded_file_manager import UploadedFile
 from transformers import pipeline
 
+# when deploying to hugging face rather than running locally we need to perform the following steps:
+# TODO model = pipeline("sentiment-analysis") 
+
 system_prompt = """
 You are an AI assistant tasked with providing detailed answers based solely on the given context. Your goal is to analyze the information provided and formulate a comprehensive, well-structured response to the question.
 
