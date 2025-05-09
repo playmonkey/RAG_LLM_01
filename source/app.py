@@ -2,7 +2,9 @@
 #
 #   See https://www.youtube.com/watch?v=1y2TohQdNbo
 #   Build your own RAG based LLM Application (Completely Offline!): AI for your documents 
-#   Yankee Maharjan
+#   Yankee Maharjan.
+#   
+#   NB: This RAG app is run as a streamlit application.
 #
 # ---------------------------------------------------------------------------------------------------------------   
 
